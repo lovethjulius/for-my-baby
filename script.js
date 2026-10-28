@@ -15,7 +15,7 @@ const nextBtn = document.getElementById("nextBtn");
 
 const questions = [
   {
-    q: "Do you miss your Loveth? 🥹",
+    q: "Do you miss your baby? 🥹",
     sub: "Be honest, Zaza. I won't judge. 👀",
     yes: "YES, I MISS YOU! ❤️",
     no: "NOT RIGHT NOW 🙈",
@@ -71,7 +71,7 @@ const questions = [
     yesMessage:
       "Mwah! Mwah! Mwah! 😚❤️\n" +
       "That's three kisses, one big hug, and unlimited " +
-      "love from your Loveth. No refunds! 😂💕",
+      "love from your baby. No refunds! 😂💕",
     noTitle: "I'M RIGHT HERE ❤️",
     noMessage:
       "No long speeches, baby. Just me reminding you " +
@@ -124,7 +124,7 @@ yesBtn.addEventListener("click", function () {
     showResult(
       "I KNEW IT! 😭❤️",
       "See ehn, Zaza! You have excellent taste. 😂💕\n\n" +
-      "Unfortunately for you, Loveth loves you right back. 😚"
+      "fortunately for you, your princess cares about you too. 😚"
     );
 
     nextBtn.textContent = "CONTINUE, BABY 💌";
@@ -207,7 +207,7 @@ function showFinalMessage() {
   finalScreen = true;
 
   showResult(
-    "HELLO AGAIN, MY ZAZA 🌚❤️",
+    "HELLO AGAIN,  ZAZA 🌚❤️",
     "I know I can't make every problem disappear, baby.\n\n" +
     "But I hope this little corner of the internet " +
     "made you smile, even if it was just for a second. 🥹💕\n\n" +
@@ -219,7 +219,7 @@ function showFinalMessage() {
     "I care about you, Zaza. On your good days and " +
     "your difficult ones, too.\n\n" +
     "Sending you one very big hug and plenty of kisses. 😚🫂\n\n" +
-    "Forever your Loveth. 🌸❤️"
+    "i miss you baby. 🌸❤️"
   );
 
   nextBtn.textContent = "START AGAIN, BABY 💗";
@@ -233,7 +233,7 @@ function restartQuiz() {
   quiz.classList.remove("hidden");
 
   questionNumber.textContent = "QUESTION 01";
-  question.textContent = "Do you like Loveth? 🥺";
+  question.textContent = "Do you like paw paw? 🥺";
   subtitle.textContent =
     "Please think carefully before you answer. 🌚";
 
