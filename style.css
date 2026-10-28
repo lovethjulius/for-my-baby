@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+  --pink: #e75489;
+  --dark-pink: #bd3e72;
+  --soft-pink: #fff0f6;
+  --text: #68394d;
+  --light-pink: #ffe0eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  color: var(--text);
+  background: linear-gradient(
+    135deg,
+    #ffdce9,
+    #fff4f8,
+    #f8ddff,
+    #ffe8f0
+  );
+  background-size: 300% 300%;
+  animation: backgroundFlow 10s ease infinite;
+  overflow-x: hidden;
+}
+
+.floating-hearts {
+  position: fixed;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 7px;
+  animation: floatHearts 3s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px 22px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.94);
+  border: 2px solid #ffd0e1;
+  border-radius: 30px;
+  box-shadow: 0 18px 50px rgba(180, 72, 116, 0.17);
+  animation: cardAppear 0.8s ease both;
+}
+
+.envelope {
+  font-size: 48px;
+  margin-bottom: 8px;
+  animation: envelopeWiggle 2s ease-in-out infinite;
+}
+
+.eyebrow {
+  margin: 8px 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #bd7391;
+}
+
+/* The big, cute, wobbly greeting */
+.personal-greeting {
+  display: inline-block;
+  margin: 12px 0 4px;
+  font-family: 'Fredoka', 'Trebuchet MS', sans-serif;
+  font-size: clamp(34px, 9vw, 47px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: var(--pink);
+  text-shadow: 2px 3px 0 #ffd3e3;
+  transform-origin: center;
+  animation: greetingWobble 2.8s ease-in-out infinite;
+}
+
+.first-message {
+  margin: 10px 0 18px;
+  font-family: 'Fredoka', 'Trebuchet MS', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--dark-pink);
+}
+
+.intro {
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 15px 0;
+}
+
+.divider {
+  color: #f09abb;
+  letter-spacing: 9px;
+  margin: 23px 0;
+}
+
+.question-number {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #c17b97;
+}
+
+h2 {
+  font-family: 'Fredoka', 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+  line-height: 1.4;
+  color: var(--dark-pink);
+  margin: 12px 0;
+}
+
+#subtitle {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.button-area {
+  position: relative;
+  min-height: 105px;
+  margin: 20px 0 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 14px 19px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.yes-button {
+  color: white;
+  background: var(--pink);
+  box-shadow: 0 6px 15px #e7548930;
+}
+
+.yes-button:hover {
+  background: var(--dark-pink);
+  box-shadow: 0 8px 20px #e7548945;
+}
+
+.no-button {
+  position: relative;
+  color: #99526b;
+  background: #f8e5ed;
+}
+
+#hint {
+  min-height: 18px;
+  font-size: 12px;
+  color: #bd7894;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.result-heart {
+  font-size: 65px;
+  animation: heartbeat 1s ease-in-out infinite;
+}
+
+#resultMessage {
+  font-size: 14px;
+  line-height: 1.9;
+  white-space: pre-line;
+  margin: 15px 0 23px;
+}
+
+#nextBtn {
+  min-width: 180px;
+}
+
+.footer {
+  margin-top: 30px;
+  padding-top: 17px;
+  border-top: 1px solid #ffe1eb;
+  font-size: 11px;
+  line-height: 1.9;
+  color: #b17c92;
+}
+
+@keyframes greetingWobble {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  20% {
+    transform: rotate(-3deg) scale(1.03);
+  }
+  40% {
+    transform: rotate(3deg) scale(1.04);
+  }
+  60% {
+    transform: rotate(-2deg) scale(1.02);
+  }
+  80% {
+    transform: rotate(2deg) scale(1.03);
+  }
+}
+
+@keyframes floatHearts {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes envelopeWiggle {
+  0%, 90%, 100% {
+    transform: rotate(0);
+  }
+  93% {
+    transform: rotate(-10deg);
+  }
+  96% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes backgroundFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (max-width: 380px) {
+  .card {
+    padding: 25px 15px;
+  }
+
+  .personal-greeting {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  button {
+    padding: 13px 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
